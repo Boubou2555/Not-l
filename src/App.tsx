@@ -58,7 +58,7 @@ const App = () => {
           </div>
           <div className="text-base mt-2 flex items-center">
             <img src={trophy} width={24} height={24} />
-            <span className="ml-1">Gold <Arrow size={18} className="ml-0 mb-1 inline-block" /></span>
+            <span className="ml-1">Super Tigre <Arrow size={18} className="ml-0 mb-1 inline-block" /></span>
           </div>
         </div>
 
