@@ -93,23 +93,23 @@ const App = () => {
             </div>
             <div className="flex-grow flex items-center max-w-60 text-sm">
               <div className="w-full bg-[#e4be4e] py-4 rounded-2xl flex justify-around">
-                <button
-                  className="flex flex-col items-center gap-1"
+                <div
+                  className="flex flex-col items-center gap-1 cursor-pointer"
                   onClick={() => openLink('https://your-link.com')}
                 >
                   <img src={bear} width={24} height={24} alt="bear" />
                   <span>borhane</span>
-                </button>
+                </div>
                 <div className="h-[48px] w-[2px] bg-[#fddb6d]"></div>
-                <button className="flex flex-col items-center gap-1">
+                <div className="flex flex-col items-center gap-1">
                   <img src={coin} width={24} height={24} alt="coin" />
                   <span>HEX</span>
-                </button>
+                </div>
                 <div className="h-[48px] w-[2px] bg-[#fddb6d]"></div>
-                <button className="flex flex-col items-center gap-1">
+                <div className="flex flex-col items-center gap-1">
                   <img src={rocket} width={24} height={24} alt="rocket" />
                   <span>Test</span>
-                </button>
+                </div>
               </div>
             </div>
           </div>
