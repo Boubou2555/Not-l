@@ -2,11 +2,16 @@ import { useEffect, useState } from 'react';
 import './index.css';
 import Arrow from './icons/Arrow';
 import { bear, coin, highVoltage, notcoin, rocket, trophy } from './images';
+import Modal from 'react-modal';
+
+// إعدادات مكتبة Modal
+Modal.setAppElement('#root');
 
 const App = () => {
   const [points, setPoints] = useState(999999999);
   const [energy, setEnergy] = useState(2532);
   const [clicks, setClicks] = useState([]);
+  const [modalIsOpen, setModalIsOpen] = useState(true); // لإظهار الحوار المنبثق عند فتح التطبيق
   const pointsToAdd = 12;
   const energyToReduce = 12;
 
@@ -41,6 +46,18 @@ const App = () => {
 
   return (
     <div className="bg-gradient-main min-h-screen px-4 flex flex-col items-center text-white font-medium">
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={() => setModalIsOpen(false)}
+        contentLabel="Admin Borhane"
+        className="modal"
+        overlayClassName="modal-overlay"
+      >
+        <h2>Admin Borhane</h2>
+        <p>مرحبا شيييييبووو</p>
+        <button onClick={() => setModalIsOpen(false)}>إغلاق</button>
+      </Modal>
+
       <div className="absolute inset-0 h-1/2 bg-gradient-overlay z-0"></div>
       <div className="absolute inset-0 flex items-center justify-center z-0">
         <div className="radial-gradient-overlay"></div>
