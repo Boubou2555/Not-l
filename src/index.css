@@ -4,6 +4,8 @@
 
 body {
   font-family: sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
 }
 
 @keyframes float {
@@ -18,16 +20,48 @@ body {
 }
 
 .bg-gradient-main {
-  background: linear-gradient(to top, #80ead2, #51eeca);
+  background: linear-gradient(to top, #3a3a3a, #1c1c1c);
 }
 
 .bg-gradient-overlay {
-  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 40%, rgba(0,212,255,0) 100%);
+  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%);
 }
 
 .radial-gradient-overlay {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle, rgba(250, 214, 92, 0.8) 0%, rgba(250, 214, 92, 0) 60%);
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.8) 0%, rgba(255, 215, 0, 0) 60%);
+}
+
+/* New styles for a more luxurious look */
+.btn {
+  background-color: #444;
+  color: #e0e0e0;
+  border: 1px solid #666;
+}
+
+.btn:hover {
+  background-color: #666;
+  color: #fff;
+}
+
+.card {
+  background-color: #1c1c1c;
+  color: #e0e0e0;
+  border: 1px solid #444;
+}
+
+.card-header {
+  background-color: #333;
+  color: #ffd700; /* gold color for a luxurious feel */
+}
+
+.card-footer {
+  background-color: #333;
+  color: #e0e0e0;
+}
+
+.text-primary {
+  color: #ffd700; /* gold color for text */
 }
