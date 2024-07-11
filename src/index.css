@@ -4,8 +4,8 @@
 
 body {
   font-family: sans-serif;
-  background-color: #1b1b2f; /* Dark blue background */
-  color: #ececec; /* Light grey text */
+  background-color: #2c2f33; /* Dark gray background similar to Discord */
+  color: #99aab5; /* Light gray text similar to Discord */
 }
 
 @keyframes float {
@@ -20,7 +20,7 @@ body {
 }
 
 .bg-gradient-main {
-  background: linear-gradient(to top, #0f3460, #162447); /* Dark blue gradient */
+  background: linear-gradient(to top, #23272a, #2c2f33); /* Dark gray gradient */
 }
 
 .bg-gradient-overlay {
@@ -31,37 +31,37 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle, rgba(34,193,195,0.8) 0%, rgba(34,193,195,0) 60%); /* Cyan radial gradient */
+  background: radial-gradient(circle, rgba(114,137,218,0.8) 0%, rgba(114,137,218,0) 60%); /* Discord blurple radial gradient */
 }
 
 /* New styles for a more luxurious look */
 .btn {
-  background-color: #162447; /* Dark blue button */
-  color: #ececec; /* Light grey text */
-  border: 1px solid #1f4068; /* Darker blue border */
+  background-color: #7289da; /* Discord blurple button */
+  color: #ffffff; /* White text */
+  border: 1px solid #99aab5; /* Light gray border */
 }
 
 .btn:hover {
-  background-color: #1f4068; /* Slightly lighter dark blue */
+  background-color: #5b6eae; /* Slightly darker Discord blurple */
   color: #ffffff; /* White text */
 }
 
 .card {
-  background-color: #1f4068; /* Dark blue card background */
-  color: #ececec; /* Light grey text */
-  border: 1px solid #162447; /* Dark blue border */
+  background-color: #23272a; /* Dark gray card background */
+  color: #99aab5; /* Light gray text */
+  border: 1px solid #2c2f33; /* Dark gray border */
 }
 
 .card-header {
-  background-color: #1b1b2f; /* Very dark blue header */
-  color: #22c1c3; /* Cyan text for header */
+  background-color: #2c2f33; /* Very dark gray header */
+  color: #7289da; /* Discord blurple text for header */
 }
 
 .card-footer {
-  background-color: #1b1b2f; /* Very dark blue footer */
-  color: #ececec; /* Light grey text */
+  background-color: #2c2f33; /* Very dark gray footer */
+  color: #99aab5; /* Light gray text */
 }
 
 .text-primary {
-  color: #22c1c3; /* Cyan color for primary text */
+  color: #7289da; /* Discord blurple color for primary text */
 }
