@@ -50,7 +50,7 @@ const App = () => {
           <div className="w-full cursor-pointer">
             <div className="bg-[#1f1f1f] text-center py-2 rounded-xl">
               <p className="text-lg">borhane hex devlopment 😏 <Arrow size={18} className="ml-0 mb-1 inline-block" /></p>
-              <p className="text-lg">صلي على النبي ❤️ <Arrow size={20} className="ml-0 mb-1 inline-block" /></p>
+              <p className="text-lg"> ❤️ صلي على النبي ❤️ <Arrow size={20} className="ml-0 mb-1 inline-block" /></p>
             </div>
             <div className="w-full z-10 min-h-screen flex flex-col items-center text-white">
 
