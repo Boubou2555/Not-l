@@ -1,67 +1,31 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 body {
-  font-family: sans-serif;
-  background-color: #2c2f33; /* Dark gray background similar to Discord */
-  color: #99aab5; /* Light gray text similar to Discord */
-}
-
-@keyframes float {
-  0% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-50px);
-  }
+  font-family: 'Roboto', sans-serif;
+  background-color: #121212;
+  color: #ffffff;
 }
 
 .bg-gradient-main {
-  background: linear-gradient(to top, #23272a, #2c2f33); /* Dark gray gradient */
+  background: linear-gradient(to right, #1f1f1f, #333);
 }
 
 .bg-gradient-overlay {
-  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%);
+  background: linear-gradient(to top, #1f1f1f, transparent);
 }
 
 .radial-gradient-overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle, rgba(114,137,218,0.8) 0%, rgba(114,137,218,0) 60%); /* Discord blurple radial gradient */
+  background: radial-gradient(circle, rgba(255,255,255,0.1), rgba(255,255,255,0));
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
 }
 
-/* New styles for a more luxurious look */
-.btn {
-  background-color: #7289da; /* Discord blurple button */
-  color: #ffffff; /* White text */
-  border: 1px solid #99aab5; /* Light gray border */
+button:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
 }
 
-.btn:hover {
-  background-color: #5b6eae; /* Slightly darker Discord blurple */
-  color: #ffffff; /* White text */
-}
-
-.card {
-  background-color: #23272a; /* Dark gray card background */
-  color: #99aab5; /* Light gray text */
-  border: 1px solid #2c2f33; /* Dark gray border */
-}
-
-.card-header {
-  background-color: #2c2f33; /* Very dark gray header */
-  color: #7289da; /* Discord blurple text for header */
-}
-
-.card-footer {
-  background-color: #2c2f33; /* Very dark gray footer */
-  color: #99aab5; /* Light gray text */
-}
-
-.text-primary {
-  color: #7289da; /* Discord blurple color for primary text */
+.text-yellow-500 {
+  color: #ffeb3b;
 }
