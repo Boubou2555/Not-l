@@ -2,21 +2,16 @@ import { useEffect, useState } from 'react';
 import './index.css';
 import Arrow from './icons/Arrow';
 import { bear, coin, highVoltage, notcoin, rocket, trophy } from './images';
-import Modal from 'react-modal';
-
-// إعدادات مكتبة Modal
-Modal.setAppElement('#root');
 
 const App = () => {
-  const [points, setPoints] = useState(100);
+  const [points, setPoints] = useState(29857775);
   const [energy, setEnergy] = useState(2532);
-  const [clicks, setClicks] = useState([]);
-  const [modalIsOpen, setModalIsOpen] = useState(true); // لإظهار الحوار المنبثق عند فتح التطبيق
+  const [clicks, setClicks] = useState<{ id: number, x: number, y: number }[]>([]);
   const pointsToAdd = 12;
   const energyToReduce = 12;
 
-  const handleClick = (e) => {
-    if (energy < energyToReduce) {
+  const handleClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    if (energy - energyToReduce < 0) {
       return;
     }
     const rect = e.currentTarget.getBoundingClientRect();
@@ -24,39 +19,25 @@ const App = () => {
     const y = e.clientY - rect.top;
 
     setPoints(points + pointsToAdd);
-    setEnergy(energy - energyToReduce);
+    setEnergy(energy - energyToReduce < 0 ? 0 : energy - energyToReduce);
     setClicks([...clicks, { id: Date.now(), x, y }]);
   };
 
-  const handleAnimationEnd = (id) => {
+  const handleAnimationEnd = (id: number) => {
     setClicks((prevClicks) => prevClicks.filter(click => click.id !== id));
   };
 
+  // useEffect hook to restore energy over time
   useEffect(() => {
     const interval = setInterval(() => {
-      setEnergy((prevEnergy) => Math.min(prevEnergy + 10, 6500));
-    }, 1000); // Restore 10 energy points every second
+      setEnergy((prevEnergy) => Math.min(prevEnergy + 1, 6500));
+    }, 100); // Restore 10 energy points every second
 
     return () => clearInterval(interval); // Clear interval on component unmount
   }, []);
 
-  const openLink = (url) => {
-    window.open(url, '_blank', 'noopener,noreferrer');
-  };
-
   return (
     <div className="bg-gradient-main min-h-screen px-4 flex flex-col items-center text-white font-medium">
-      <Modal
-        isOpen={modalIsOpen}
-        onRequestClose={() => setModalIsOpen(false)}
-        contentLabel="Admin Borhane"
-        className="modal"
-        overlayClassName="modal-overlay"
-      >
-        <h2>Admin Borhane</h2>
-        <p>مرحبا شيييييبووو</p>
-        <button onClick={() => setModalIsOpen(false)}>إغلاق</button>
-      </Modal>
 
       <div className="absolute inset-0 h-1/2 bg-gradient-overlay z-0"></div>
       <div className="absolute inset-0 flex items-center justify-center z-0">
@@ -64,21 +45,23 @@ const App = () => {
       </div>
 
       <div className="w-full z-10 min-h-screen flex flex-col items-center text-white">
+
         <div className="fixed top-0 left-0 w-full px-4 pt-8 z-10 flex flex-col items-center text-white">
           <div className="w-full cursor-pointer">
             <div className="bg-[#1f1f1f] text-center py-2 rounded-xl">
-              <p className="text-lg">borhane hex development <Arrow size={18} className="ml-0 mb-1 inline-block" /></p>
+              <p className="text-lg">borhane hex devlopment 😏 <Arrow size={18} className="ml-0 mb-1 inline-block" /></p>
             </div>
           </div>
           <div className="mt-12 text-5xl font-bold flex items-center">
-            <img src={coin} width={44} height={44} alt="coin" />
+            <img src={coin} width={44} height={44} />
             <span className="ml-2">{points.toLocaleString()}</span>
           </div>
           <div className="text-base mt-2 flex items-center">
-            <img src={trophy} width={24} height={24} alt="trophy" />
+            <img src={trophy} width={24} height={24} />
             <span className="ml-1">Super Tigre <Arrow size={18} className="ml-0 mb-1 inline-block" /></span>
           </div>
         </div>
+
 
         <div className="fixed bottom-0 left-0 w-full px-4 pb-4 z-10">
           <div className="w-full flex justify-between gap-2">
@@ -93,23 +76,20 @@ const App = () => {
             </div>
             <div className="flex-grow flex items-center max-w-60 text-sm">
               <div className="w-full bg-[#e4be4e] py-4 rounded-2xl flex justify-around">
-                <div
-                  className="flex flex-col items-center gap-1 cursor-pointer"
-                  onClick={() => openLink('https://your-link.com')}
-                >
-                  <img src={bear} width={24} height={24} alt="bear" />
+                <button className="flex flex-col items-center gap-1">
+                  <img src={bear} width={24} height={24} alt="High Voltage" />
                   <span>borhane</span>
-                </div>
+                </button>
                 <div className="h-[48px] w-[2px] bg-[#fddb6d]"></div>
-                <div className="flex flex-col items-center gap-1">
-                  <img src={coin} width={24} height={24} alt="coin" />
+                <button className="flex flex-col items-center gap-1">
+                  <img src={coin} width={24} height={24} alt="High Voltage" />
                   <span>HEX</span>
-                </div>
+                </button>
                 <div className="h-[48px] w-[2px] bg-[#fddb6d]"></div>
-                <div className="flex flex-col items-center gap-1">
-                  <img src={rocket} width={24} height={24} alt="rocket" />
+                <button className="flex flex-col items-center gap-1">
+                  <img src={rocket} width={24} height={24} alt="High Voltage" />
                   <span>Test</span>
-                </div>
+                </button>
               </div>
             </div>
           </div>
@@ -117,6 +97,7 @@ const App = () => {
             <div className="bg-gradient-to-r from-[#f3c45a] to-[#fffad0] h-4 rounded-full" style={{ width: `${(energy / 6500) * 100}%` }}></div>
           </div>
         </div>
+
 
         <div className="flex-grow flex items-center justify-center">
           <div className="relative mt-4" onClick={handleClick}>
@@ -137,6 +118,7 @@ const App = () => {
             ))}
           </div>
         </div>
+
       </div>
     </div>
   );
