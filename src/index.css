@@ -4,8 +4,8 @@
 
 body {
   font-family: sans-serif;
-  background-color: #121212;
-  color: #e0e0e0;
+  background-color: #1b1b2f; /* Dark blue background */
+  color: #ececec; /* Light grey text */
 }
 
 @keyframes float {
@@ -20,7 +20,7 @@ body {
 }
 
 .bg-gradient-main {
-  background: linear-gradient(to top, #3a3a3a, #1c1c1c);
+  background: linear-gradient(to top, #0f3460, #162447); /* Dark blue gradient */
 }
 
 .bg-gradient-overlay {
@@ -31,37 +31,37 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle, rgba(255, 215, 0, 0.8) 0%, rgba(255, 215, 0, 0) 60%);
+  background: radial-gradient(circle, rgba(34,193,195,0.8) 0%, rgba(34,193,195,0) 60%); /* Cyan radial gradient */
 }
 
 /* New styles for a more luxurious look */
 .btn {
-  background-color: #444;
-  color: #e0e0e0;
-  border: 1px solid #666;
+  background-color: #162447; /* Dark blue button */
+  color: #ececec; /* Light grey text */
+  border: 1px solid #1f4068; /* Darker blue border */
 }
 
 .btn:hover {
-  background-color: #666;
-  color: #fff;
+  background-color: #1f4068; /* Slightly lighter dark blue */
+  color: #ffffff; /* White text */
 }
 
 .card {
-  background-color: #1c1c1c;
-  color: #e0e0e0;
-  border: 1px solid #444;
+  background-color: #1f4068; /* Dark blue card background */
+  color: #ececec; /* Light grey text */
+  border: 1px solid #162447; /* Dark blue border */
 }
 
 .card-header {
-  background-color: #333;
-  color: #ffd700; /* gold color for a luxurious feel */
+  background-color: #1b1b2f; /* Very dark blue header */
+  color: #22c1c3; /* Cyan text for header */
 }
 
 .card-footer {
-  background-color: #333;
-  color: #e0e0e0;
+  background-color: #1b1b2f; /* Very dark blue footer */
+  color: #ececec; /* Light grey text */
 }
 
 .text-primary {
-  color: #ffd700; /* gold color for text */
+  color: #22c1c3; /* Cyan color for primary text */
 }
