@@ -31,7 +31,7 @@ const App = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setEnergy((prevEnergy) => Math.min(prevEnergy + 1, 6500));
-    }, 100); // Restore 10 energy points every second
+    }, 1000); // Restore 10 energy points every second
 
     return () => clearInterval(interval); // Clear interval on component unmount
   }, []);
