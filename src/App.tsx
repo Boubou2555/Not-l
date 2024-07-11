@@ -80,12 +80,12 @@ const App = () => {
                   <img src={bear} width={24} height={24} alt="High Voltage" />
                   <span>borhane</span>
                 </button>
-                <div className="h-[48px] w-[2px] bg-[#5d5e75]"></div>
+                <div className="h-[48px] w-[2px] bg-[#9899a6]"></div>
                 <button className="flex flex-col items-center gap-1">
                   <img src={coin} width={24} height={24} alt="High Voltage" />
                   <span>HEX</span>
                 </button>
-                <div className="h-[48px] w-[2px] bg-[#5d5e75]"></div>
+                <div className="h-[48px] w-[2px] bg-[#9899a6]"></div>
                 <button className="flex flex-col items-center gap-1">
                   <img src={rocket} width={24} height={24} alt="High Voltage" />
                   <span>Test</span>
@@ -93,7 +93,7 @@ const App = () => {
               </div>
             </div>
           </div>
-          <div className="w-full bg-[#5be4f3] rounded-full mt-4">
+          <div className="w-full bg-[#9899a6] rounded-full mt-4">
             <div className="bg-gradient-to-r from-[#f3c45a] to-[#fffad0] h-4 rounded-full" style={{ width: `${(energy / 6500) * 100}%` }}></div>
           </div>
         </div>
