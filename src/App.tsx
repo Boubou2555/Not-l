@@ -54,7 +54,7 @@ const App = () => {
             </div>
             <div className="w-full z-10 min-h-screen flex flex-col items-center text-white">
 
-        <div className="fixed top-5 left-0 w-full px-4 pt-8 z-10 flex flex-col items-center text-white">
+        <div className="fixed top 5 left-0 w-full px-4 pt-8 z-10 flex flex-col items-center text-white">
           <div className="w-full cursor-pointer">
             <div className="bg-[#1f1f1f] text-center py-2 rounded-xl">
               <p className="text-lg">borhane hex devlopment 😏 <Arrow size={18} className="ml-0 mb-1 inline-block" /></p>
