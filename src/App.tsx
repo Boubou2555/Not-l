@@ -80,12 +80,12 @@ const App = () => {
                   <img src={bear} width={24} height={24} alt="High Voltage" />
                   <span>borhane</span>
                 </button>
-                <div className="h-[48px] w-[2px] bg-[#fddb6d]"></div>
+                <div className="h-[48px] w-[2px] bg-[#5d5e75]"></div>
                 <button className="flex flex-col items-center gap-1">
                   <img src={coin} width={24} height={24} alt="High Voltage" />
                   <span>HEX</span>
                 </button>
-                <div className="h-[48px] w-[2px] bg-[#fddb6d]"></div>
+                <div className="h-[48px] w-[2px] bg-[#5d5e75]"></div>
                 <button className="flex flex-col items-center gap-1">
                   <img src={rocket} width={24} height={24} alt="High Voltage" />
                   <span>Test</span>
