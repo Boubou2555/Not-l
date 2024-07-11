@@ -8,7 +8,7 @@ import Modal from 'react-modal';
 Modal.setAppElement('#root');
 
 const App = () => {
-  const [points, setPoints] = useState(999999999);
+  const [points, setPoints] = useState(100);
   const [energy, setEnergy] = useState(2532);
   const [clicks, setClicks] = useState([]);
   const [modalIsOpen, setModalIsOpen] = useState(true); // لإظهار الحوار المنبثق عند فتح التطبيق
